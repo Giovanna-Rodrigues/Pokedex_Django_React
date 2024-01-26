@@ -1,0 +1,1 @@
+//All Pokemon that weight more than 30 and less than 80
