@@ -1,15 +1,15 @@
 import React from 'react';
-import './Navbar.css';
+import '../../static/css/Navbar.css';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <ul>
-        <li><img alt="pokeapi-logo" src="./static/image/pokedex-logo.png" className='navbar-img'/></li>
-        <li><a href="#">opção 1</a></li>
-        <li><a href="#">opção 2</a></li>
-        <li><a href="#">opção 3</a></li>
-        <li><a href="#">opção 4</a></li>
+        <li><a href=''><img alt="pokeapi-logo" src="./static/image/pngegg.png" className='navbar-img'/></a></li>
+        <li className='pages'><a href="/WeightPokemon">Pokemons Weight</a></li>
+        <li className='pages'><a href="/GrassPokemon">Grass Pokemons</a></li>
+        <li className='pages'><a href="/FlyingPokemon">Flying Pokemons</a></li>
+        <li className='pages'><a href="/GuessPokemon">Guess the pokemon</a></li>
       </ul>
     </nav>
   );

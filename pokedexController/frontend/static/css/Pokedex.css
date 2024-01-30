@@ -1,0 +1,13 @@
+/* Adicione este estilo ao seu arquivo Pokemon.css */
+.pokedex-component {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px; 
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.pokemon-component {
+    width: 20%;
+}

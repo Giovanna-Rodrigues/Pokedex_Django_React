@@ -1,0 +1,12 @@
+.pokemon-component {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px; 
+    width: 15%;
+    text-align: right;
+}
+
+.pokemon-title {
+    font-weight: bold; 
+}
