@@ -1,28 +1,33 @@
-// App.js
-import React from "react";
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Navbar from "./Navbar";
-import Pokedex from "./Pokedex";
-import WeightPokemon from "./WeightPokemon";
-import GrassPokemon from "./GrassPokemons";
-import FlyingPokemon from "./FlyingPokemon";
+import React, { Component } from "react";
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; // Importe o Switch e o Route
+import Navbar from "./Navbar.js"
+import Pokedex from "./Pokedex.js";
+import WeightPokemon from "./WeightPokemon.js"
+import GrassPokemon from "./GrassPokemons.js";
+import FlyingPokemon from "./FlyingPokemon.js"
 
-const App = () => {
-  return (
-    <Router>
-      <div>
-        <Navbar />
-        <Router>
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <Router> {/* Adicione o Router envolvendo o conteúdo */}
+        <div>
+          <div><Navbar /></div>
           <Switch>
-            <Route exact path="/" component={Pokedex} />
+            <Route path="/" exact component={Pokedex} />
             <Route path="/WeightPokemon" component={WeightPokemon} />
             <Route path="/GrassPokemon" component={GrassPokemon} />
             <Route path="/FlyingPokemon" component={FlyingPokemon} />
           </Switch>
-        </Router>
-      </div>
-    </Router>
-  );
-};
+        </div>
+      </Router>
+    );
+  }
+}
 
-export default App;
+const appDiv = document.getElementById("app");
+createRoot(appDiv).render(<App />);

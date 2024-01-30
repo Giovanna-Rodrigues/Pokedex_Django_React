@@ -61,7 +61,7 @@ def getPokemons(request):
 #Getting pokemons by Weight
 def getPokemonsByWeight(request):
     minWeight = request.GET.get('minWeight')
-    maxWeight = request.GET.get('maxWeight')
+    maxWeight = float(request.GET.get('maxWeight'))
 
     apiUrl = f'{baseUrlApi}/pokemon/'
     params = {
